@@ -41,7 +41,9 @@ DerivedData
 
 .idea/modules.xml
 
-.idea/react-native-device-info.iml
+.idea/react-native-deviceInfo.iml
+
+.idea/reactTemplatesPlugin.xml
 
 .idea/vcs.xml
 

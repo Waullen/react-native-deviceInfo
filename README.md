@@ -1,6 +1,7 @@
-# react-native-device-info
+# react-native-deviceInfo
 
 Hi,all 这是直接copy于 https://github.com/rebeccahughes/react-native-device-info 项目代码；修改 android 部分代码（获取设备唯一标识 。等等）
+
 [![npm version](https://badge.fury.io/js/react-native-device-info.svg)](http://badge.fury.io/js/react-native-device-info)
 
 Device Information for [React Native](https://github.com/facebook/react-native)
@@ -41,7 +42,7 @@ Then run `pod install`
 In XCode, in the project navigator:
 - Right click _Libraries_
 - Add Files to _[your project's name]_
-- Go to `node_modules/react-native-device-info`
+- Go to `node_modules/react-native-deviceinfo`
 - Add the `.xcodeproj` file
 
 In XCode, in the project navigator, select your project.
@@ -62,7 +63,7 @@ Run your project (Cmd+R)
 dependencies {
     ...
     compile "com.facebook.react:react-native:+"  // From node_modules
-+   compile project(':react-native-device-info')
++   compile project(':react-native-deviceinfo')
 }
 ```
 
@@ -71,8 +72,8 @@ dependencies {
 ```diff
 ...
 include ':app'
-+ include ':react-native-device-info'
-+ project(':react-native-device-info').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-device-info/android')
++ include ':react-native-deviceinfo'
++ project(':react-native-deviceinfo').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-deviceinfo/android')
 ```
 
 #### With React Native 0.29+
@@ -122,7 +123,7 @@ include ':app'
 ### Windows
 - Open the solution in Visual Studio for your Windows apps
 - right click your in the Explorer and click Add > Existing Project...
-- Navigate to `./<app-name>/node_modules/react-native-device-info/windows/RNDeviceInfo` and add `RNDeviceInfo.csproj`
+- Navigate to `./<app-name>/node_modules/react-native-deviceinfo/windows/RNDeviceInfo` and add `RNDeviceInfo.csproj`
 - this time right click on your React Native Windows app under your solutions directory and click Add > Reference...
 - check the `RNDeviceInfo` you just added and press ok
 - open up `MainPage.cs` for your app and edit the file like so:
@@ -153,13 +154,13 @@ If you want to get the device name in Android add this to your `AndroidManifest.
 
 ## Release Notes
 
-See [CHANGELOG.md](https://github.com/rebeccahughes/react-native-device-info/blob/master/CHANGELOG.md)
+See [CHANGELOG.md](https://github.com/rebeccahughes/react-native-deviceinfo/blob/master/CHANGELOG.md)
 
 ## Example
 
 ```js
-var DeviceInfo = require('react-native-device-info');
-// or import DeviceInfo from 'react-native-device-info';
+var DeviceInfo = require('react-native-deviceinfo');
+// or import DeviceInfo from 'react-native-deviceinfo';
 
 console.log("Device Unique ID", DeviceInfo.getUniqueID());  // e.g. FCDBD8EF-62FC-4ECB-B2F5-92C9E79AC7F9
 // * note this is IDFV on iOS so it will change if all apps from the current apps vendor have been previously uninstalled

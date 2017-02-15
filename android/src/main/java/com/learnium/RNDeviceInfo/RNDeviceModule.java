@@ -106,7 +106,7 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
     constants.put("deviceId", Build.BOARD);
     constants.put("deviceLocale", this.getCurrentLanguage());
     constants.put("deviceCountry", this.getCurrentCountry());
-    constants.put("uniqueId", Secure.getString(this.reactContext.getContentResolver(), Secure.ANDROID_ID));
+    constants.put("uniqueId", getUniqueId());//Secure.getString(this.reactContext.getContentResolver(), Secure.ANDROID_ID));
     constants.put("systemManufacturer", Build.MANUFACTURER);
     constants.put("bundleId", packageName);
     constants.put("userAgent", System.getProperty("http.agent"));
@@ -114,5 +114,27 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
     constants.put("isEmulator", this.isEmulator());
     constants.put("isTablet", this.isTablet());
     return constants;
+  }
+
+
+  public  String getUniqueId(){
+          String  uuid="";
+                try {
+                    final TelephonyManager tm = (TelephonyManager) this.reactContext
+                            .getSystemService(Context.TELEPHONY_SERVICE);
+                    uuid = "" + tm.getDeviceId();
+                }catch (SecurityException e) {
+                    uuid = "";
+                }finally {
+                    if (TextUtils.isEmpty(uuid)) {
+                        final SharedPreferences prefs = this.reactContext.getSharedPreferences( "device_id.xml", 0);
+                        uuid = prefs.getString("device_id", null);
+                         if (TextUtils.isEmpty(uuid)) {
+                             uuid = UUID.randomUUID().toString().replace("-", "");
+                         }
+                         prefs.edit().putString("device_id", uuid).apply();
+                    }
+                }
+          return uuid;
   }
 }
