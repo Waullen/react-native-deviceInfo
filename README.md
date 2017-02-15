@@ -1,5 +1,6 @@
 # react-native-device-info
 
+Hi,all 这是直接copy于 https://github.com/rebeccahughes/react-native-device-info 项目代码；修改 android 部分代码（获取设备唯一标识 。等等）
 [![npm version](https://badge.fury.io/js/react-native-device-info.svg)](http://badge.fury.io/js/react-native-device-info)
 
 Device Information for [React Native](https://github.com/facebook/react-native)
