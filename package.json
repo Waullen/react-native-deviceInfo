@@ -1,6 +1,6 @@
 {
   "name": "react-native-deviceinfo",
-  "version": "0.10.2",
+  "version": "0.10.3",
   "description": "Get device information using react-native",
   "main": "deviceinfo.js",
   "repository": {
