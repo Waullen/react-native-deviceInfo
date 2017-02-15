@@ -130,7 +130,7 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
                     uuid = "" + tm.getDeviceId();
                 }catch (SecurityException e) {
                     uuid = "";
-                }finally {git
+                }finally {
                     if (TextUtils.isEmpty(uuid)) {
                         final SharedPreferences prefs = this.reactContext.getSharedPreferences( "device_id.xml", 0);
                         uuid = prefs.getString("device_id", null);
