@@ -1,5 +1,5 @@
 {
-  "name": "react-native-device-info",
+  "name": "react-native-deviceinfo",
   "version": "0.10.0",
   "description": "Get device information using react-native",
   "main": "deviceinfo.js",
@@ -17,6 +17,6 @@
     "events",
     "cocoapod"
   ],
-  "author": "Rebecca Hughes <rebecca@learnium.net> (https://github.com/rebeccahughes)",
+  "author": "Hu chuanhui <huchuanhui@aliyun.com> (https://github.com/huchuanhui/)",
   "license": "MIT"
 }
