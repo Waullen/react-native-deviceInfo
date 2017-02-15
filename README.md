@@ -8,7 +8,7 @@ Device Information for [React Native](https://github.com/facebook/react-native)
 ## Install
 
 ```shell
-npm install --save react-native-device-info
+npm install --save react-native-deviceinfo
 ```
 
 ## Automatically link
@@ -16,7 +16,7 @@ npm install --save react-native-device-info
 #### With React Native 0.27+
 
 ```shell
-react-native link react-native-device-info
+react-native link react-native-deviceinfo
 ```
 
 #### With older versions of React Native
@@ -24,7 +24,7 @@ react-native link react-native-device-info
 You need [`rnpm`](https://github.com/rnpm/rnpm) (`npm install -g rnpm`)
 
 ```shell
-rnpm link react-native-device-info
+rnpm link react-native-deviceinfo
 ```
 
 ## Manually link
@@ -32,7 +32,7 @@ rnpm link react-native-device-info
 ### iOS (via Cocoa Pods)
 Add the following line to your build targets in your `Podfile`
 
-`pod 'RNDeviceInfo', :path => '../node_modules/react-native-device-info'`
+`pod 'RNDeviceInfo', :path => '../node_modules/react-native-deviceinfo'`
 
 Then run `pod install`
 
