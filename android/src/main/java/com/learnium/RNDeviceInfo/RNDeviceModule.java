@@ -95,12 +95,12 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
 
     String deviceName = "Unknown";
 
-    try {
-      BluetoothAdapter myDevice = BluetoothAdapter.getDefaultAdapter();
-      deviceName = myDevice.getName();
-    } catch(Exception e) {
-      e.printStackTrace();
-    }
+//     try {
+//       BluetoothAdapter myDevice = BluetoothAdapter.getDefaultAdapter();
+//       deviceName = myDevice.getName();
+//     } catch(Exception e) {
+//       e.printStackTrace();
+//     }
 
     constants.put("instanceId", InstanceID.getInstance(this.reactContext).getId());
     constants.put("deviceName", deviceName);
