@@ -1,5 +1,10 @@
 package com.learnium.RNDeviceInfo;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+import android.telephony.TelephonyManager;
+import android.text.TextUtils;
+import java.util.UUID;
 import android.bluetooth.BluetoothAdapter;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -125,7 +130,7 @@ public class RNDeviceModule extends ReactContextBaseJavaModule {
                     uuid = "" + tm.getDeviceId();
                 }catch (SecurityException e) {
                     uuid = "";
-                }finally {
+                }finally {git
                     if (TextUtils.isEmpty(uuid)) {
                         final SharedPreferences prefs = this.reactContext.getSharedPreferences( "device_id.xml", 0);
                         uuid = prefs.getString("device_id", null);
