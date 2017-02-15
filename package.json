@@ -5,7 +5,7 @@
   "main": "deviceinfo.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rebeccahughes/react-native-device-info"
+    "url": "https://github.com/huchuanhui/react-native-deviceInfo"//"https://github.com/rebeccahughes/react-native-device-info"
   },
   "keywords": [
     "react-component",
